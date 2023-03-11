@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TextTrove</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="popup.js"></script>
+  </head> 
+  <body>
+    <div class="container">
+    <header class="header">
+      <h1 class="header__logo">TextTrove</h1>
+      <a href="settings.html"><button class="header__btn">
+        <img src="src/settings_icon.svg" alt="Settings">
+      </button></a>
+    </header>
+<main>
+  <form>
+    <div class="input-container">
+      <label for="promptInput">Prompt:</label>
+      <input type="text" id="promptInput" name="prompt">
+      <button type="button" id="get-response">Submit</button>
+    </div>
+    <div>
+      <label for="documentInput">Document:</label>
+      <input type="file" id="documentInput" name="document">
+    </div>
+  </form>
+  
+  <section>
+    <h2>Response:</h2>
+    <textarea id="response" rows="5" cols="50" readonly></textarea>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2023 TextTrove. All rights reserved.</p>
+</footer>
+</div>
+</body>
+</html>

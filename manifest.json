@@ -1,0 +1,27 @@
+{
+    "name": "TextTrove - ChatGPT Document Analyzer",
+    "version": "1.0",
+    "description": "A Chrome extension that uses ChatGPT API with document support.",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "dist/bundle.js"
+    },
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab",
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+    "https://api.openai.com/*"
+    ],
+    "optional_host_permissions": [
+    "*://*/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

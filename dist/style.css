@@ -1,0 +1,52 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  padding: 0; }
+
+a {
+  color: #0066cc;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+input[type=text], textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px; }
+
+button[type=button] {
+  background-color: #0079c2;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 10px; }
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; }
+
+label {
+  font-weight: bold;
+  margin-right: 10px; }
+
+#response {
+  margin-top: 10px;
+  resize: none; }
+

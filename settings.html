@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TextTrove - Settings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="settings.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <header class="header">
+      <h1 class="header__logo">TextTrove - Settings</h1>
+      <a href="popup.html" title="Go Back"><button class="header__btn">
+        Back
+      </button></a>
+    </header>
+    <p id="status"></p>
+    <p>Please enter your settings:</p>
+    <form>
+      <label for="apiKey">API Key:</label>
+      <input type="text" id="apiKey" name="apiKey" value="">
+      <br><br>
+      <label for="promptLength">Prompt Length:</label>
+      <input type="number" id="promptLength" name="promptLength" value="">
+      <br><br>
+      <label for="temperature">Temperature:</label>
+      <input type="number" id="temperature" name="temperature" value="">
+      <br><br>
+      <label for="maxTokens">Max Tokens:</label>
+      <input type="number" id="maxTokens" name="maxTokens" value="">
+      <br><br>
+      <input id="save" type="submit" value="Save">
+    </form>
+    
+  </div>
+  </body>
+</html>
