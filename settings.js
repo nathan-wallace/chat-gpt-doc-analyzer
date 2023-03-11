@@ -1,5 +1,6 @@
-// Load saved settings from chrome storage
-function save_options() {
+document.addEventListener('DOMContentLoaded', function() {
+  // Load saved settings from chrome storage
+  function save_options() {
     // Retrieve the updated values from the input fields
     const apiKey = document.getElementById("apiKey").value;
     const promptLength = parseInt(document.getElementById("promptLength").value);
@@ -20,12 +21,12 @@ function save_options() {
         status.textContent = "";
       }, 5000);
     });
-}
+  }
 
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-function restore_options() {
+  // Restores select box and checkbox state using the preferences
+  // stored in chrome.storage.
+  function restore_options() {
     // Use default value color = 'red' and likesColor = true.
     chrome.storage.sync.get(["apiKey", "promptLength", "temperature", "maxTokens"], function(items) {
         const apiKeyEl = document.getElementById("apiKey");
@@ -42,5 +43,11 @@ function restore_options() {
   
       });
   }
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', save_options);
+  
+  // Attach event listener to save button
+  const saveBtn = document.getElementById('saveBtn');
+  if (saveBtn) saveBtn.addEventListener('click', save_options);
+
+  // Restore saved options on page load
+  restore_options();
+});
