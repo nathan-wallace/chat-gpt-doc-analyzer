@@ -11,85 +11,37 @@
   --button-hover-bg-color: #005ea2;
   --button-hover-text-color: #fff;
 }
+
+/* Body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  margin: 20px;
+  margin: 0;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
   background-color: var(--background-color);
 }
-.container{
-  min-width: 470px;
+
+/* Containers */
+.container {
+  min-width: 430px;
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 24px;
-  margin: 0 0 20px;
-  padding: 0;
-  color: var(--text-color);
-}
-p{
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-input[type=text],
-textarea {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-button[type=button] {
-  background-color: var(--button-bg-color);
-  border: none;
-  border-radius: 3px;
-  color: var(--button-text-color);
-  cursor: pointer;
-  margin-left: 10px;
-  padding: 5px 10px;
-}
-
-button[type=button]:hover {
-  background-color: var(--button-hover-bg-color);
-  color: var(--button-hover-text-color);
-}
-
-.input-container {
+.status-container{
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  flex: 1;
+  position: relative;
+  vertical-align: middle;
 }
-
-label {
-  font-weight: bold;
-  margin-right: 10px;
-  color: var(--text-color);
-}
-
-#response {
-  margin-top: 10px;
-  resize: none;
-  color: var(--secondary-color);
-}
+/* Headers */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   color: #fff;
 }
 
@@ -108,3 +60,203 @@ label {
   color: var(--link-color);
 }
 
+/* Input container */
+.input-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/* Input field */
+.input-container input[type="text"] {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+/* Response message */
+.response-message {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+}
+
+#response {
+  resize: vertical;
+  color: var(--secondary-color);
+}
+
+/* Buttons */
+button[type="button"] {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 0 1rem 1rem 0;
+}
+
+button[type="button"]:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+}
+
+
+#saveBtn {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 1rem 1.55rem;
+  margin: 0;
+  border-radius: .75rem;
+}
+
+#saveBtn:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: var(--text-color);
+}
+
+/* Textareas */
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 0px;
+}
+
+/* Headings and paragraphs */
+h1, p {
+  color: var(--text-color);
+  margin: 0 0 10px;
+  padding: 0;
+}
+#status{
+  color: var(--link-color);
+  padding: 1rem 1rem 0 1rem;
+}
+#status p{
+  padding: 0;
+}
+h1 {
+  font-size: 12px;
+}
+
+footer{
+  margin: 1rem 0 0 0;
+}
+footer p{
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+#loader-container{
+  height: 32px;
+  width: 56px;
+  background-color: #f1f3f7;
+  border-width: 5px;
+  border-radius: 0 20px 20px 20px;  
+  position: absolute;
+  margin:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  span:nth-child(2) {
+		animation-delay: 40ms;
+	}
+	span:nth-child(3) {
+		animation-delay: 150ms;
+	}
+}
+
+span.dot {
+  height: 3px;
+  width: 3px;
+  padding: 1px;
+  margin: 2px;
+  background-color: #949EA8;
+  border-radius: 50%;
+  animation-name: zoom;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+    background-color:#f1f3f7;
+  }
+  25% {
+    transform: scale(0.6);
+    background-color:#f1f3f7;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color:#282828;
+  }
+  100% {
+    transform: scale(1);
+    background-color:#f1f3f7;
+  }
+}
+
+
+.display-loading{
+  display:inline;
+}
+.display-none{
+  display:none !important;
+}
+
+
+/*Typewriting*/
+#response *{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

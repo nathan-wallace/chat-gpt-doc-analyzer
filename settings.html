@@ -14,7 +14,7 @@
         Back
       </button></a>
     </header>
-    <p id="status"></p>
+    
     <p>Please enter your settings:</p>
     <form>
       <label for="apiKey">API Key:</label>
@@ -29,7 +29,10 @@
       <label for="maxTokens">Max Tokens:</label>
       <input type="number" id="maxTokens" name="maxTokens" value="">
       <br><br>
-      <input id="saveBtn" type="submit" value="Save">
+      <div class="status-container">
+        <input id="saveBtn" type="submit" value="Save">
+        <p id="status"></p>
+      </div>
     </form>
     
   </div>

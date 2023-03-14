@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       status.textContent = "Settings saved.";
       setTimeout(function() {
         status.textContent = "";
-      }, 5000);
+      }, 3000);
     });
   }
 
@@ -43,11 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
       });
   }
-  
-  // Attach event listener to save button
-  const saveBtn = document.getElementById('saveBtn');
-  if (saveBtn) saveBtn.addEventListener('click', save_options);
 
+  // Bind the save_options function to the form submit event
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      save_options();
+    });
+  }
   // Restore saved options on page load
   restore_options();
 });

@@ -20,7 +20,7 @@ class ChatGPT {
     
         // Parse response as JSON
         const responseData = await response.json();
-       // console.log(promptInput);
+        
         // Extract and return chat response
         const chatResponse = responseData.choices[0].message.content;
         //console.log(chatResponse);
